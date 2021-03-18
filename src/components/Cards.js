@@ -12,13 +12,13 @@ function Cards() {
             <CardItem
               src='images/img-9.jpg'
               text='Lorelli Възглавница за кърмене 190 см'
-              label='25.99 lv.'
+              label='BGN 25.99'
               path='/services'
             />
             <CardItem
               src='images/img-2.jpg'
               text='Nuvita Възглавница за бременност и кърмене DreamWizard'
-              label='99.90 lv.'
+              label='BGN 99.90'
               path='/services'
             />
           </ul>

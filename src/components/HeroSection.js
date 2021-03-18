@@ -7,8 +7,8 @@ function HeroSection() {
   return (
     <div className='hero-container'>
       <video src='/videos/video-1.mp4' autoPlay loop muted />
-      <h1>Луна</h1>
-      <p>Оставете да се погрижим за вашия спокоен сън!</p>
+      <h1>Moon</h1>
+      <p>Get your sweet dreams now!</p>
       <div className='hero-btns'>
         <Button
           className='btns'
