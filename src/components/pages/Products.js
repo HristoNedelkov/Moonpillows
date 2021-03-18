@@ -1,6 +1,12 @@
 import React from 'react';
 import '../../App.css';
+import Main from '../Main.js'
 
 export default function Products() {
-  return <h1 className='products'>PRODUCTS</h1>;
+  return (
+    <div className="products">
+        <Main> </Main>
+    </div>
+
+  ) 
 }

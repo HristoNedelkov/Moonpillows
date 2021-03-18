@@ -1,9 +1,10 @@
 import React from 'react'
+import Main from '../Main.js'
 
 function product() {
     return (
-        <div className="contaner">
-            
+        <div className="container">
+            <Main> as</Main>
         </div>
         )
 }
