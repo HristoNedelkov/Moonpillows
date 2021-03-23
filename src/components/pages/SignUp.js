@@ -22,7 +22,7 @@ export default function SignUp() {
 
         </form>
 
-        <p>Password must be six or more characters</p>
+        <p>Password must be six or more characters!</p>
 
       </body>
     </div>
