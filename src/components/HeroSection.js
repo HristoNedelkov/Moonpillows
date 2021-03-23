@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
 
+let VideoComp = lazy(() => import('../components/VideoComp'))
 function HeroSection() {
   return (
     <div className='hero-container'>
-      <video src='/videos/video-1.mp4' autoPlay loop muted />
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <VideoComp />
+      </Suspense>
       <h1>Moon</h1>
       <p>Get your sweet dreams now!</p>
       <div className='hero-btns'>
@@ -15,7 +18,7 @@ function HeroSection() {
           buttonStyle='btn--outline'
           buttonSize='btn--large'
         >
-         Към продуктите
+          Към продуктите
         </Button>
         <Button
           className='btns'

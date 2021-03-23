@@ -42,3 +42,12 @@
   color: #fff;
   font-size: 100px;
 }
+
+.products .cards {
+  width: 80%;
+  height: 100%;
+}
+
+#products-title  {
+  color: black;
+}
