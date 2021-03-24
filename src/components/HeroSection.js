@@ -9,9 +9,10 @@ function HeroSection() {
     <div className='hero-container'>
       <Suspense fallback={<h1>Loading...</h1>}>
         <VideoComp />
-      </Suspense>
+        
       <h1>Moon</h1>
       <p>Get your sweet dreams now!</p>
+      </Suspense>
       <div className='hero-btns'>
         <Button
           className='btns'

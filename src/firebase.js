@@ -1,4 +1,4 @@
-import  firebase from 'firebase';
+import firebase from 'firebase'
 
 let firebaseConfig = {
     apiKey: "AIzaSyAjPy-_P-jyW3gKLp3m_hC-Y7j1IkI9slg",
@@ -6,7 +6,8 @@ let firebaseConfig = {
     projectId: "moonpillows-676c2",
     storageBucket: "moonpillows-676c2.appspot.com",
     messagingSenderId: "1040908882334",
-    appId: "1:1040908882334:web:b9cec53a710b54d606468f"
+    appId: "1:1040908882334:web:b9cec53a710b54d606468f",
+    databaseURL: "https://moonpillows-676c2-default-rtdb.europe-west1.firebasedatabase.app/"
 };
 firebase.initializeApp(firebaseConfig);
 

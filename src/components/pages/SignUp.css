@@ -1,5 +1,10 @@
 /* helpers/alignment.css */
-
+#sign-up {
+  border: 47px solid;
+  width: 45%;
+  margin: 50px auto;
+  border-radius: 63px 4px 15px 20px;
+}
 #sign-up .align {
   align-items: center;
   display: flex;
