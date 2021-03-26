@@ -16,9 +16,7 @@ export default function Products({match}) {
       setPillows(Object.entries(data));
     });
 
-  }, [])
-  console.log(pillows);
-  console.log(match);
+  },[])
   return (
     <>
       <div className="products">
@@ -33,6 +31,7 @@ export default function Products({match}) {
                     src={el[1].src}
                     text={el[1].text}
                     label={"BGN " + el[1].label}
+                    description={el[1].description}
                     path={"pillows/" + el[0]}
                   />
                 )

@@ -43,3 +43,13 @@
 #products-title  {
   color: black;
 }
+
+.enter-products input textarea{
+  display: block;
+}
+
+.enter-products {
+  align-items: center;
+  align-content: center;
+  margin: 0 auto;
+}
