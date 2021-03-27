@@ -1,17 +1,21 @@
 import React from 'react'
+import { Redirect } from 'react-router'
 import './AddPillowForm.css'
 import addPillow from './services/pillowHandlers'
 
 
-function AddPillowForm() {
+function AddPillowForm(props) {
 
     function handleSubmit(e) {
         e.preventDefault()
         const el = e.target
         const all = [el.title,el.price,el.link,el.description].map(el=> el.value)
-        //Sent the pillow to DB :)
         addPillow(all)
-      }
+        .then(()=> {
+
+            props.history.push('/products')
+        })
+    }
 
     return (
        
