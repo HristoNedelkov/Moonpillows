@@ -1,7 +1,7 @@
 import React from 'react'
 import { Redirect } from 'react-router'
 import './AddPillowForm.css'
-import addPillow from './services/pillowHandlers'
+import {addPillow} from './services/pillowHandlers'
 
 
 function AddPillowForm(props) {

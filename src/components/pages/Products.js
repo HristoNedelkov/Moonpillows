@@ -1,22 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import firebase from '../../firebase'
 
 import CardItem from '../CardItem';
 import '../../App.css';
-//import Main from '../Main.js'
+
 import Footer from '../Footer';
+import { getAll } from "../services/pillowHandlers";
 
-export default function Products({match}) {
+export default function Products({ match }) {
   const [pillows, setPillows] = useState([]);
+  getAll().then(res=> {
+    setPillows(res);
 
-  useEffect(() => {
-    let productsListRef = firebase.database().ref('pillows')
-    productsListRef.on('value', (snapshot) => {
-      const data = snapshot.val();
-      setPillows(Object.entries(data));
-    });
-
-  },[])
+  })
   return (
     <>
       <div className="products">
@@ -24,19 +19,19 @@ export default function Products({match}) {
           <h1 id="products-title">Products</h1>
           <div className='cards__wrapper'>
             <ul className='cards__items'>
-              {pillows.map(el => {
+              {pillows.map(([id, all]) => {
                 return (
                   <CardItem
-                    key={el[0]}
-                    src={el[1].src}
-                    text={el[1].text}
-                    label={"BGN " + el[1].label}
-                    description={el[1].description}
-                    path={"pillows/" + el[0]}
+                    key={id}
+                    src={all.src}
+                    text={all.text}
+                    label={"BGN " + all.label}
+                    description={all.description}
+                    path={"pillows/" + id}
                   />
                 )
               })}
-              
+
             </ul>
           </div>
         </div>

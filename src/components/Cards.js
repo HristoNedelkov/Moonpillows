@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
-
+import { getAll } from "./services/pillowHandlers";
 function Cards() {
   return (
     <div className='cards'>
@@ -9,6 +9,7 @@ function Cards() {
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
+            
             <CardItem
               src='images/img-9.jpg'
               text='Lorelli Възглавница за кърмене 190 см'
