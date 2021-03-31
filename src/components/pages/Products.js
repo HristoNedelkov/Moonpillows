@@ -8,10 +8,14 @@ import { getAll } from "../services/pillowHandlers";
 
 export default function Products({ match }) {
   const [pillows, setPillows] = useState([]);
-  getAll().then(res=> {
-    setPillows(res);
+  useEffect(() => {
 
-  })
+    getAll().then(res => {
+      setPillows(res);
+    })
+
+  }, [pillows])
+
   return (
     <>
       <div className="products">
@@ -27,7 +31,7 @@ export default function Products({ match }) {
                     text={all.text}
                     label={"BGN " + all.label}
                     description={all.description}
-                    path={"pillows/" + id}
+                    path={`pillows/${id}`}
                   />
                 )
               })}
