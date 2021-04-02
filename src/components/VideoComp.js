@@ -1,11 +1,20 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import firebase from './../firebase'
+import './VideoComp.css'
 function VideoComp() {
+    const storage = firebase.storage();
+    const video = storage.ref().child('videos/video-1.mp4');
+
+    const [videoLink, setVideoLink] = useState('')
+
+    video.getDownloadURL().then((url) => {setVideoLink(url)}).catch((error) => {console.log(error);});
 
     return (
-         <video src="https://r4---sn-nv47lnsr.c.drive.google.com/videoplayback?expire=1617389265&ei=kS5nYPntMt_MwtQPuquF6AI&ip=77.85.115.44&cp=QVRGWURfWFJURlhPOm9rYThwb2hoUG15LXZiT3A1SXRIcklya2hhdnhWc3dIS0haangwdVhmNWc&id=9d4fa9436943d1d8&itag=37&source=webdrive&requiressl=yes&mh=pw&mm=32&mn=sn-nv47lnsr&ms=su&mv=m&mvi=4&pl=20&sc=yes&ttl=transient&susc=dr&driveid=1gcwPqf7_L8yf_cn0moA93mFrdfoXH786&app=explorer&mime=video/mp4&vprv=1&prv=1&dur=11.238&lmt=1617351028849769&mt=1617374661&sparams=expire,ei,ip,cp,id,itag,source,requiressl,ttl,susc,driveid,app,mime,vprv,prv,dur,lmt&sig=AOq0QJ8wRAIgO-Fcl7o9W0TpV_kN0dz2MOZcw5ypAlfeIZosmY76VN4CICg63uVeRjeWKb_s77cnFzf_fHuipzP_SirhXWEk5vsL&lsparams=mh,mm,mn,ms,mv,mvi,pl,sc&lsig=AG3C_xAwRAIgF9s_VDzf3j-_TE8UbMwHXpzDolCVidL0V295KrqKVBACIFV-zSnOnHeb9daSPgXJAGH1gDFwkO-eTLxDo_M61RMu&cpn=u5ZEytJ2pnxyeEpz&c=WEB_EMBEDDED_PLAYER&cver=1.20210331.1.0" autoPlay loop muted   />
+        <video src={videoLink} autoPlay loop muted />
     )
-    
+
+
+
 }
 
 export default VideoComp
