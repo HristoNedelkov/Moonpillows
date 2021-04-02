@@ -1,0 +1,1 @@
+{"version":3,"sources":["VideoComp.css"],"names":[],"mappings":"AAAA,MACI,gBAAiB,CACjB,UAAW,CACX,WAAY,CACZ,cAAe,CACf,UACF","file":"3.df8e1aac.chunk.css","sourcesContent":["video {\r\n    object-fit: cover;\r\n    width: 100%;\r\n    height: 100%;\r\n    position: fixed;\r\n    z-index: -1;\r\n  }"]}
