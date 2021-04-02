@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "641d312ec8287cf825922ef32121e79f",
+    "revision": "fc83c9218172b4867c96ee1f8de54777",
     "url": "/Moonpillows/index.html"
   },
   {
-    "revision": "48e2c54109e53a8e9e15",
+    "revision": "a176624ff3dbda17ec50",
     "url": "/Moonpillows/static/css/main.69aa224b.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Moonpillows/static/js/3.f48d9d73.chunk.js"
   },
   {
-    "revision": "48e2c54109e53a8e9e15",
-    "url": "/Moonpillows/static/js/main.f8c1c031.chunk.js"
+    "revision": "a176624ff3dbda17ec50",
+    "url": "/Moonpillows/static/js/main.3ccefdb0.chunk.js"
   },
   {
     "revision": "599651ee1b8adc8e348e",
