@@ -1,2 +1,0 @@
-(this["webpackJsonpnavbar-dropdown-v1"]=this["webpackJsonpnavbar-dropdown-v1"]||[]).push([[3],{54:function(o,e,t){"use strict";t.r(e);var a=t(2),n=t.n(a);e.default=function(){return n.a.createElement("video",{src:"https://drive.google.com/file/d/1d1UJOVu8dNEatwi7g8JoHCG-LdbbFy93/view",autoPlay:!0,loop:!0,muted:!0})}}}]);
-//# sourceMappingURL=3.f6a97685.chunk.js.map

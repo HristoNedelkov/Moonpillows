@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "35f998b96b225b05dd7e4ba22f0ff771",
+    "revision": "78eb0f9ec28850c6db61cd3fffc2673b",
     "url": "/Moonpillows/index.html"
   },
   {
-    "revision": "792c40e95bb05c465ef1",
+    "revision": "20b2fc2cbdefdfe84595",
     "url": "/Moonpillows/static/css/main.69aa224b.chunk.css"
   },
   {
@@ -16,15 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Moonpillows/static/js/2.7ab6cdf1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "308e42ba462f7ac98871",
-    "url": "/Moonpillows/static/js/3.f6a97685.chunk.js"
+    "revision": "89092f98c371e60a6a64",
+    "url": "/Moonpillows/static/js/3.78a7a0de.chunk.js"
   },
   {
-    "revision": "792c40e95bb05c465ef1",
-    "url": "/Moonpillows/static/js/main.2d81efb4.chunk.js"
+    "revision": "20b2fc2cbdefdfe84595",
+    "url": "/Moonpillows/static/js/main.99eb71c3.chunk.js"
   },
   {
-    "revision": "2990a2536b47405b2845",
-    "url": "/Moonpillows/static/js/runtime-main.30071508.js"
+    "revision": "6e270645d058c4edbb51",
+    "url": "/Moonpillows/static/js/runtime-main.6afa44ae.js"
   }
 ]);
