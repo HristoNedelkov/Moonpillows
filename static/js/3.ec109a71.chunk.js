@@ -1,2 +1,0 @@
-(this["webpackJsonpnavbar-dropdown-v1"]=this["webpackJsonpnavbar-dropdown-v1"]||[]).push([[3],{54:function(o,e,n){"use strict";n.r(e);var a=n(2),t=n.n(a);e.default=function(){return t.a.createElement("video",{src:"/videos/video-1.mp4",autoPlay:!0,loop:!0,muted:!0})}}}]);
-//# sourceMappingURL=3.ec109a71.chunk.js.map
