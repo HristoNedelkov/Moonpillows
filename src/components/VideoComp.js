@@ -3,7 +3,7 @@ import React from 'react'
 function VideoComp() {
 
     return (
-        <video src='/videos/video-1.mp4' autoPlay loop muted   />
+        <video src='https://drive.google.com/file/d/1d1UJOVu8dNEatwi7g8JoHCG-LdbbFy93/view' autoPlay loop muted   />
     )
 }
 
