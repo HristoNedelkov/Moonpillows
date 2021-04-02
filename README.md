@@ -1,3 +1,3 @@
 # Moon
  
-## Hosted here! ->  https://hristonedelkov.github.io/Moonpillows 
+## Hosted here! ->  https://hristonedelkov.github.io/
