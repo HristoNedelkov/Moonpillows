@@ -20,7 +20,7 @@ function HeroSection() {
         <VideoComp />
 
         <h1>Moon</h1>
-        <p>Get your sweet dreams now!</p>
+        <p>Get your sweet dreams now!!</p>
       </Suspense>
       <div className='hero-btns'>
         <Button
