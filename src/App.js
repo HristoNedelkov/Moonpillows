@@ -7,19 +7,23 @@ import Services from './components/pages/Services';
 import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
 import NotFound from './components/NotFound';
+import fullPath from './components/services/pathSolver';
+import About from './components/About';
 
 function App() {
+  
   return (
     <>
       <Router>
         <Navbar />
         <Switch>
-          <Route path='/Moonpillows' ><Redirect to="/"/></Route>
-          <Route path='/' exact component={Home} />
-          <Route path='/services' component={Services} />
-          <Route path='/products' exact component={Products} />
-          <Route path='/sign-up' component={SignUp} />
-          <Route component={NotFound}/>
+          <Route path='/' exact  ><Redirect to="/Moonpillows"/></Route>
+          <Route path={fullPath('')}exact component={Home}></Route>
+          <Route path={fullPath('services')} component={Services} />
+          <Route path={fullPath('products')} exact component={Products} />
+          <Route path={fullPath('sign-up')} component={SignUp} />
+          <Route path={fullPath('about')} component={About}></Route>
+          <Route component={NotFound} />
         </Switch>
       </Router>
 

@@ -5,6 +5,7 @@ import '../../App.css';
 
 import Footer from '../Footer';
 import { getAll } from "../services/pillowHandlers";
+import fullPath from '../services/pathSolver';
 
 export default function Products({ match }) {
   const [pillows, setPillows] = useState([]);
@@ -19,6 +20,7 @@ export default function Products({ match }) {
   return (
     <>
       <div className="products">
+        
         <div className='cards'>
           <h1 id="products-title">Products</h1>
           <div className='cards__wrapper'>
@@ -31,7 +33,7 @@ export default function Products({ match }) {
                     text={all.text}
                     label={"BGN " + all.label}
                     description={all.description}
-                    path={`pillows/${id}`}
+                    path={fullPath(`pillows/${id}`)}
                   />
                 )
               })}

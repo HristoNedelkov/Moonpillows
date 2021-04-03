@@ -29,22 +29,19 @@ async function getAll() {
 
     if (res.exists()) {
         let snap = await res.val()
-        return  Object.entries(snap)
+        return Object.entries(snap)
     } else {
         console.log("No data available");
     }
 }
 
 
-Object.defineProperty(Array.prototype, 'chunk', {
-    value: function(n) {
-  
-      // ACTUAL CODE FOR CHUNKING ARRAY:
-      return Array.range(Math.ceil(this.length/n)).map((x,i) => this.slice(i*n,i*n+n));
-  
-    }
-  });
-  
+
+// function chunks(n) {
+//     return Array.range(Math.ceil(this.length / n)).map((x, i) => this.slice(i * n, i * n + n));
+// }
+
+
 export {
     getAll,
     addPillow

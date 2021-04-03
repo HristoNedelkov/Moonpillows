@@ -151,3 +151,11 @@
 .navbar .pressed {
   text-shadow: -2px 2px 33px  #ffffff;
 }
+
+.navbar #last-button {
+  color: white;
+  text-decoration: none;
+}
+.navbar #last-button:hover {
+  color: black;
+}

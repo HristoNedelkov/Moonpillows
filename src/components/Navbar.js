@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
+import fullPath from './services/pathSolver';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -28,7 +29,7 @@ function Navbar() {
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+          <Link to={fullPath('')} className='navbar-logo' onClick={closeMobileMenu}>
             MP
             <i className='fab fa-typo3' />
           </Link>
@@ -37,36 +38,47 @@ function Navbar() {
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <NavLink to='/' activeClassName="pressed" exact={true} className='nav-links' onClick={closeMobileMenu}>
+              <NavLink to={fullPath('')} activeClassName="pressed" exact={true} className='nav-links' onClick={closeMobileMenu}>
                 Home
               </NavLink>
             </li>
             <li className='nav-item'>
               <NavLink
-                to='/services'
+                to={fullPath('services')}
                 className='nav-links'
                 onClick={closeMobileMenu}
-                activeClassName="pressed" 
-                exact={true} 
+                activeClassName="pressed"
+                exact={true}
               >
                 Services
               </NavLink>
             </li>
             <li className='nav-item'>
               <NavLink
-                to='/products'
-                activeClassName="pressed" 
-                exact={true} 
+                to={fullPath('products')}
+                activeClassName="pressed"
+                exact={true}
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
                 Products
               </NavLink>
             </li>
+            <li className='nav-item'>
+              <NavLink
+                to={fullPath('about')}
+                activeClassName="pressed"
+                exact={true}
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                About
+              </NavLink>
+            </li>
 
             <li>
               <Link
-                to='/sign-up'
+                to={fullPath('sign-up')}
                 className='nav-links-mobile'
                 onClick={closeMobileMenu}
               >
@@ -74,7 +86,13 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+          {button && <Button buttonStyle='btn--outline'>
+            <Link
+            to={fullPath('sign-up')}
+            id="last-button">
+              SIGN UP
+            </Link>
+            </Button>}
         </div>
       </nav>
     </>

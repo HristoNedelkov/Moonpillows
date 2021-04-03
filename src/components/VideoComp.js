@@ -7,7 +7,9 @@ function VideoComp() {
 
     const [videoLink, setVideoLink] = useState('')
 
-    video.getDownloadURL().then((url) => {setVideoLink(url)}).catch((error) => {console.log(error);});
+    video.getDownloadURL()
+        .then((url) => { setVideoLink(url) })
+        .catch((error) => { console.log(error); });
 
     return (
         <video src={videoLink} autoPlay loop muted />
