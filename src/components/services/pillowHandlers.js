@@ -31,18 +31,20 @@ async function getAll() {
 }
 
 function onChunks(array, n) {
+    let all = [];
+    while (array.length > 0) {
+        if (array.length <= n) {
+            all.push(array)
+            array = []
+        } else {
+            let part = array.splice(1, n)
 
-    
-    let j
-    let chunk = n;
-    let arr = []
-    for (let i = 0, j = array.length; i < j; i += chunk) {
-    let  temparray = array.slice(i, i + chunk);
-        // do whatever
-        arr.push(temparray)
+            all.push(part)
+        }
+
     }
-    console.log(arr)
-    return arr
+    return all;
+
 }
 
 
