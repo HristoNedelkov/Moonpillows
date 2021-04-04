@@ -25,20 +25,8 @@
   font-size: 100px;
 }
 
-.products {
-  background-image: url('/images/stars.jpg');
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  color: #fff;
-  
-}
 
 
-.products .cards {
-  width: 80%;
-  height: 100%;
-}
 
 #products-title  {
   color: black;

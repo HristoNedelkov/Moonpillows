@@ -40,6 +40,36 @@ function Cards() {
               path='/products'
             />
           </ul>
+          <ul className='cards__items'>
+            <CardItem
+              src='images/img-2.jpg'
+              text='Nuvita Възглавница за бременност и кърмене DreamWizard'
+              label='BGN 99.90'
+              path='/services'
+            />
+
+            <CardItem
+              src='images/img-4.jpg'
+              text='Experience Football on Top of the Himilayan Mountains'
+              label='Adventure'
+              path='/products'
+            />
+          </ul>
+          <ul className='cards__items'>
+            <CardItem
+              src='images/img-2.jpg'
+              text='Nuvita Възглавница за бременност и кърмене DreamWizard'
+              label='BGN 99.90'
+              path='/services'
+            />
+
+            <CardItem
+              src='images/img-4.jpg'
+              text='Experience Football on Top of the Himilayan Mountains'
+              label='Adventure'
+              path='/products'
+            />
+          </ul>
           <ul className="cards__items">
             <CardItem
               src='images/img-3.jpg'

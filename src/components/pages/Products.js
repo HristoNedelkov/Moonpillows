@@ -4,26 +4,51 @@ import CardItem from '../CardItem';
 import '../../App.css';
 
 import Footer from '../Footer';
-import { getAll } from "../services/pillowHandlers";
+import { getAll, onChunks } from "../services/pillowHandlers";
 import fullPath from '../services/pathSolver';
 
 export default function Products({ match }) {
   const [pillows, setPillows] = useState([]);
   useEffect(() => {
-
     getAll().then(res => {
-      setPillows(res);
+      setPillows(onChunks(res, 4));
     })
+  }, [])
 
-  }, [pillows])
+  console.log()
 
   return (
     <>
-      <div className="products">
-        
-        <div className='cards'>
-          <h1 id="products-title">Products</h1>
+      <h1>Products  </h1>
+      
+      <div className='cards'>
+        <div className='cards__container'>
           <div className='cards__wrapper'>
+
+            {
+              pillows.map(set => {
+
+                let el = set.map(([id, all]) => {
+                  return (
+                    <CardItem
+                      key={id}
+                      src={all.src}
+                      text={all.text}
+                      label={"BGN " + all.label}
+                      description={all.description}
+                      path={fullPath(`pillows/${id}`)}
+                    />)
+                })
+
+                return (
+                  <ul className="cards__items">
+                    {el}
+                  </ul>
+                )
+              })
+            }
+
+            {/* 
             <ul className='cards__items'>
               {pillows.map(([id, all]) => {
                 return (
@@ -39,11 +64,25 @@ export default function Products({ match }) {
               })}
 
             </ul>
+            <ul className='cards__items'>
+              {pillows.map(([id, all]) => {
+                return (
+                  <CardItem
+                    key={id}
+                    src={all.src}
+                    text={all.text}
+                    label={"BGN " + all.label}
+                    description={all.description}
+                    path={fullPath(`pillows/${id}`)}
+                  />
+                )
+              })}
+
+            </ul> */}
           </div>
         </div>
       </div>
       <Footer></Footer>
-
     </>
 
   )

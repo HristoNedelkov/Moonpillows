@@ -2,10 +2,7 @@
   padding: 4rem;
   background-color: rgba(255, 255, 255, 0.7);
 }
-
-h1 {
-  text-align: center;
-}
+ 
 
 .cards__container {
   display: flex;
@@ -18,9 +15,13 @@ h1 {
 
 .cards__wrapper {
   position: relative;
-  margin: 50px 0 45px;
+  margin: 50px 0 405px;
+  display: inline-block;
 }
+#spacer {
+ display: block;
 
+}
 .cards__items {
   margin-bottom: 24px;
 }
@@ -117,3 +118,13 @@ h1 {
     margin-bottom: 2rem;
   }
 }
+
+.products .cards {
+  width: 80%;
+  height: 100%;
+}
+
+.cards h1 {
+  text-align: center;
+  color: black;
+  }

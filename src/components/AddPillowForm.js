@@ -11,7 +11,6 @@ function AddPillowForm(props) {
         const all = [el.title,el.price,el.link,el.description].map(el=> el.value)
         addPillow(all)
         .then(()=> {
-
             props.history.push('/products')
         })
     }

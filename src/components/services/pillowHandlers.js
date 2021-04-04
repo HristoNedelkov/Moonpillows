@@ -17,12 +17,7 @@ function addPillow([text, label, src, description]) {
 }
 
 async function getAll() {
-    // let productsListRef = await firebase.database().ref('pillows')
-    // console.log('out')
-    // await productsListRef.on('value', (snapshot) => {
-    //     const data = Object.entries(snapshot.val());
-    //     return data
-    // });
+
     const database = await firebase.database();
 
     let res = await database.ref().child('pillows').get()
@@ -35,14 +30,25 @@ async function getAll() {
     }
 }
 
+function onChunks(array, n) {
 
-
-// function chunks(n) {
-//     return Array.range(Math.ceil(this.length / n)).map((x, i) => this.slice(i * n, i * n + n));
-// }
+    
+    let j
+    let chunk = n;
+    let arr = []
+    for (let i = 0, j = array.length; i < j; i += chunk) {
+    let  temparray = array.slice(i, i + chunk);
+        // do whatever
+        arr.push(temparray)
+    }
+    console.log(arr)
+    return arr
+}
 
 
 export {
     getAll,
-    addPillow
+    addPillow,
+    onChunks,
+
 }
