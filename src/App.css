@@ -41,15 +41,14 @@
 
 .products-header form {
 text-align: right;
-margin: 50px 410px 0 0;
 }
-.products-header>form input {
+.products-header>.product-forms input {
   font: inherit;
   padding: 0.2em 0.5em;
 }
-.products-header > form label {
+.products-header > .product-forms label {
   font-family: 'Lobster', cursive;
-  font-size: 32px;
+  font-size: 30px;
 }
 
 .products-header h1 {
@@ -58,4 +57,9 @@ margin: 50px 410px 0 0;
   text-shadow: 2px 4px 4px #aaa;
   font-family: 'Dancing Script', cursive;
   transition: all 2.5s;
+}
+
+.product-forms {
+  display: inline-block;
+  margin: 50px 0 0 20%;
 }

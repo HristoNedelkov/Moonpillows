@@ -10,7 +10,7 @@ function Cards() {
   const [pillows, setPillows] = useState([]);
   useEffect(() => {
     getAll().then(res => {
-      setPillows(res);
+      setPillows(res.reverse());
     })
   }, [])
 
@@ -24,7 +24,7 @@ function Cards() {
 
           <ul className='cards__items'>
 
-            {pillows.slice(1, 3).map(([id, all]) => {
+            {pillows.slice(0, 2).map(([id, all]) => {
               return (
                 <CardItem
                   key={id}
