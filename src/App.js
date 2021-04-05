@@ -8,7 +8,7 @@ import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
 import NotFound from './components/NotFound';
 import fullPath from './components/services/pathSolver';
-import About from './components/About';
+import About from './components/pages/About';
 
 function App() {
   

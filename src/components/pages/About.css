@@ -1,0 +1,66 @@
+.about-page h1 {
+    text-align: center;
+}
+
+.about-page .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.about-page .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    width: 400px;
+    height: 609px;
+}
+
+.about-page img {
+    width: 100%;
+}
+
+.about-page .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+}
+
+.about-page .container {
+    padding: 0 16px;
+}
+
+.about-page .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.about-page .title {
+    color: grey;
+}
+
+.about-page .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.about-page .button:hover {
+    background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}

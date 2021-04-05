@@ -42,8 +42,8 @@ function HeroSection() {
         </Button>
         
       </div>
-      {videoOn ? (<iframe width="560" height="315" 
-      src="https://www.youtube.com/embed/H1Gz0pF56RI?start=1&mute=0&autoplay=1&mute=0&controls=0"
+      {videoOn ? (<iframe width="560" height="315"  
+      src="https://www.youtube.com/embed/pm9xQU2dN9Q?autoplay=1"
       title="This is the trailer video"
        frameborder="2" ></iframe>) : ''}
     </div>

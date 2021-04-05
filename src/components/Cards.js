@@ -36,7 +36,7 @@ function Cards() {
             })}
           </ul>
           <ul className='cards__items'>
-          {pillows.slice(3, 6).map(([id, all]) => {
+          {pillows.slice(2, 5).map(([id, all]) => {
               return (
                 <CardItem
                   key={id}
