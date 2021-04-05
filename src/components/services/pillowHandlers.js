@@ -38,7 +38,6 @@ function onChunks(array, n) {
             array = []
         } else {
             let part = array.splice(1, n)
-
             all.push(part)
         }
 

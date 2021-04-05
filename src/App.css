@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,3 +34,28 @@
   color: black;
 }
 
+.products-header h1  {
+  text-align: center;
+
+}
+
+.products-header form {
+text-align: right;
+margin: 50px 410px 0 0;
+}
+.products-header>form input {
+  font: inherit;
+  padding: 0.2em 0.5em;
+}
+.products-header > form label {
+  font-family: 'Lobster', cursive;
+  font-size: 32px;
+}
+
+.products-header h1 {
+  color: #1B1919;
+  font-size: 90px;
+  text-shadow: 2px 4px 4px #aaa;
+  font-family: 'Dancing Script', cursive;
+  transition: all 2.5s;
+}

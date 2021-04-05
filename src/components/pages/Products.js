@@ -13,13 +13,11 @@ export default function Products({ match }) {
 
   useEffect(() => {
     getAll().then(res => {
-      setPillows(makeOnChunks(res,countByRow));
+      setPillows(onChunks(res, countByRow));
     })
   }, [countByRow])
 
-  function makeOnChunks (arr,n) {
-    return onChunks(arr, n)
-  }
+  
 
   function onChangeCount(e) {
     setCountByRow(e.target.value)
@@ -27,12 +25,13 @@ export default function Products({ match }) {
 
   return (
     <>
-      <h1>Products  </h1>
-      <form onChange={onChangeCount}>
-        <label htmlFor="count">Брой на ред: </label>
-        <input type="number" id="count" value={countByRow} name="count" min="1" max="10" />
-      </form>
-
+      <div className="products-header">
+        <h1>Products  </h1>
+        <form onChange={onChangeCount}>
+          <label htmlFor="count">Брой на ред: </label>
+          <input type="number" id="count" value={countByRow} name="count" min="1" max="10" />
+        </form>
+      </div>
       <div className='cards'>
         <div className='cards__container'>
           <div className='cards__wrapper'>
