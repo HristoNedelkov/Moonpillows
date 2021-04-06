@@ -30,7 +30,7 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to={fullPath('')} className='navbar-logo' onClick={closeMobileMenu}>
-            MP
+            MP 
             <i className='fab fa-typo3' />
           </Link>
           <div className='menu-icon' onClick={handleClick}>

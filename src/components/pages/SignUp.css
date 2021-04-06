@@ -4,15 +4,12 @@
   width: 45%;
   margin: 50px auto;
   border-radius: 63px 4px 15px 20px;
-}
-#sign-up .align {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* helpers/icon.css */
 
 #sign-up .icon {
   font-size: 2rem;
@@ -78,4 +75,22 @@
 
 #sign-up .form__input:invalid+.icon::after {
   content: '😳';
+}
+
+#sign-up .login-link {
+  margin-top: 20px;
+  text-decoration: none;
+  color: black  ;
+  display: block;
+  cursor: default;
+}
+#sign-up .login-link span{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#sign-up button {
+  margin: 0 auto;
+  color: red;
+  
 }

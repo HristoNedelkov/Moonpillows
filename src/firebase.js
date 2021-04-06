@@ -1,4 +1,5 @@
 import firebase from 'firebase'
+import 'firebase/auth'
 
 let firebaseConfig = {
     apiKey: "AIzaSyAjPy-_P-jyW3gKLp3m_hC-Y7j1IkI9slg",
@@ -10,5 +11,6 @@ let firebaseConfig = {
     databaseURL: "https://moonpillows-676c2-default-rtdb.europe-west1.firebasedatabase.app/"
 };
 firebase.initializeApp(firebaseConfig);
+
 
 export default firebase;

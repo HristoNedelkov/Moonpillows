@@ -1,6 +1,5 @@
 const fullPath = (str) => {
-    let baseUrl = '/Moonpillows'
-    return baseUrl+'/'+ str
+  return `/Moonpillows/${str}`
 
-  }
-  export default fullPath
+}
+export default fullPath
