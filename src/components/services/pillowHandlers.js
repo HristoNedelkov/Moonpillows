@@ -30,6 +30,26 @@ async function getAll() {
         console.log("No data available");
     }
 }
+async function getAllForUser(uid) {
+
+    const database = await firebase.database();
+
+    let res = await database.ref().child('pillows').get()
+
+    if (res.exists()) {
+        let snap = await res.val()
+       let result =  Object.entries(snap).filter(([id, all]) => {
+            if (all.owners.includes(uid)) {
+                return [id, all]
+            } else {
+                return ''
+            }
+        })
+        return result
+    } else {
+        console.log("No data available");
+    }
+}
 async function getOne(id) {
     const database = await firebase.database();
 
@@ -63,16 +83,14 @@ function onChunks(array, n) {
 
 }
 
-async function addCreator(id,creator) {
+async function addCreator(id, creator) {
     const ref = await firebase.database().ref().child('pillows/' + id);
-
-    // sync down from server
-    //await ref.on('value', function (snap) { list = snap.val(); });
     let res = await (await ref.get()).val()
+    if (!res.owners.includes(creator)) {
 
-    res.owners.push(creator)
-    console.log('tova gore e + ownerite')
-    await ref.set(res);
+        res.owners.push(creator)
+        await ref.set(res);
+    }
 }
 
 
@@ -82,4 +100,5 @@ export {
     onChunks,
     getOne,
     addCreator,
+    getAllForUser,
 }

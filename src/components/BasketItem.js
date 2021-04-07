@@ -1,6 +1,6 @@
 import React from 'react'
-
-function BasketItem() {
+import './Basket.css'
+function BasketItem({title,price,src}) {
     return (
         <div className="item">
             <div className="buttons">
@@ -9,13 +9,11 @@ function BasketItem() {
             </div>
 
             <div className="image">
-                <img src="https://firebasestorage.googleapis.com/v0/b/moonpillows-676c2.appspot.com/o/images%2Fitem-1.png?alt=media&token=f73f26c7-7a91-4887-8d96-9ae46fd6d8cd" alt="" />
+                <img id="snimka" src={src} alt="" />
             </div>
 
             <div className="description">
-                <span>Common Projects</span>
-                <span>Bball High</span>
-                <span>White</span>
+                <span>{title}</span>
             </div>
 
             <div className="quantity">
@@ -28,7 +26,7 @@ function BasketItem() {
                 </button>
             </div>
 
-            <div className="total-price">$549</div>
+            <div className="total-price">{price}</div>
         </div>
     )
 }

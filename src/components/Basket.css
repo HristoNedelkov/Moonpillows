@@ -75,9 +75,7 @@ html, body {
     animation-fill-mode: forwards;
 }
 
-/* .shopping-cart .is-active {
-  
-} */
+
 
 @keyframes animate {
     0% {
@@ -95,9 +93,12 @@ html, body {
     margin-right: 50px;
 }
 
-/* .shopping-cart>.image img {
-    display: flex;
-} */
+
+#snimka {
+    max-width: 280px ;
+    max-height: 189px ;
+
+}
 
 .shopping-cart .description {
     padding-top: 10px;
