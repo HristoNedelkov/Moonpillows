@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Button } from './Button';
 import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
 import fullPath from './services/pathSolver';
+import ThingsContext from '../context/userContexxt';
 
 function Navbar({ user }) {
+  const context = useContext(ThingsContext)
+
+
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -24,6 +28,7 @@ function Navbar({ user }) {
   }, []);
 
   window.addEventListener('resize', showButton);
+
 
   return (
     <>
@@ -94,6 +99,7 @@ function Navbar({ user }) {
             </Link>
           </Button>}
         </div>
+        <h1 style={{ color: 'white' }}> {context ? ' ' + context.email : 'Nqma'}</h1>
       </nav>
     </>
   );
