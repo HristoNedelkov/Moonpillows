@@ -41,6 +41,7 @@ function Navbar({ user }) {
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
+          <h1 style={{ color: 'white', marginLeft: '20px', fontSize: '22px' }}> {context ? `Welcome,  ${context.email}` : ''}</h1>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <NavLink to={fullPath('')} activeClassName="pressed" exact={true} className='nav-links' onClick={closeMobileMenu}>
@@ -99,7 +100,9 @@ function Navbar({ user }) {
             </Link>
           </Button>}
         </div>
-        <h1 style={{ color: 'white' }}> {context ? ' ' + context.email : 'Nqma'}</h1>
+        <Link to={fullPath('basket')}>
+        {context ? (<img alt="" src="https://firebasestorage.googleapis.com/v0/b/moonpillows-676c2.appspot.com/o/images%2Fbasket.png?alt=media&token=b4fb3515-7268-4938-a924-f1368f2a889d"></img>) : ''}
+        </Link>
       </nav>
     </>
   );

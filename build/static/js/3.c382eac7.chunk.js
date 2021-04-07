@@ -1,0 +1,2 @@
+(this["webpackJsonpnavbar-dropdown-v1"]=this["webpackJsonpnavbar-dropdown-v1"]||[]).push([[3],{58:function(o,t,e){},59:function(o,t,e){"use strict";e.r(t);var n=e(8),a=e(0),c=e.n(a),r=e(16);e(58);t.default=function(){var o=r.a.storage().ref().child("videos/video-1.mp4"),t=Object(a.useState)(""),e=Object(n.a)(t,2),i=e[0],s=e[1];return o.getDownloadURL().then((function(o){s(o)})).catch((function(o){console.log(o)})),c.a.createElement("video",{src:i,autoPlay:!0,loop:!0,muted:!0})}}}]);
+//# sourceMappingURL=3.c382eac7.chunk.js.map

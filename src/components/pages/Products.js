@@ -66,7 +66,7 @@ export default function Products({ match }) {
                       text={all.text}
                       label={"BGN " + all.label}
                       description={all.description}
-                      path={fullPath(`pillows/${id}`)}
+                      path={fullPath(`products/${id}`)}
                     />)
                 })
 

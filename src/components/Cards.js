@@ -32,7 +32,7 @@ function Cards() {
                   text={all.text}
                   label={"BGN " + all.label}
                   description={all.description}
-                  path={fullPath(`pillows/${id}`)} />)
+                  path={fullPath(`products/${id}`)} />)
             })}
           </ul>
           <ul className='cards__items'>
@@ -44,7 +44,7 @@ function Cards() {
                   text={all.text}
                   label={"BGN " + all.label}
                   description={all.description}
-                  path={fullPath(`pillows/${id}`)} />)
+                  path={fullPath(`products/${id}`)} />)
             })}
 
           </ul>

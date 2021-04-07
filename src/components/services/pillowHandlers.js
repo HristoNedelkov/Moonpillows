@@ -29,6 +29,18 @@ async function getAll() {
         console.log("No data available");
     }
 }
+async function getOne(id) {
+    const database = await firebase.database();
+
+    let res = await database.ref().child('pillows/' + id).get()
+
+    if (res.exists()) {
+        let snap = await res.val()
+        return snap
+    } else {
+        console.log("No pillow found with this id!");
+    }
+}
 
 function onChunks(array, n) {
     let all = [];
@@ -51,5 +63,5 @@ export {
     getAll,
     addPillow,
     onChunks,
-
+    getOne
 }
