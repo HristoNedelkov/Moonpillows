@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
 import fullPath from './services/pathSolver';
 
-function Navbar() {
+function Navbar({ user }) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -30,7 +30,7 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to={fullPath('')} className='navbar-logo' onClick={closeMobileMenu}>
-            MP 
+            MP
             <i className='fab fa-typo3' />
           </Link>
           <div className='menu-icon' onClick={handleClick}>
@@ -88,11 +88,11 @@ function Navbar() {
           </ul>
           {button && <Button buttonStyle='btn--outline'>
             <Link
-            to={fullPath('sign-up')}
-            id="last-button">
-              SIGN UP
+              to={!user ? fullPath('sign-up') : fullPath('logout')}
+              id="last-button">
+              {!user ? 'SIGN UP' : 'LOGOUT'}
             </Link>
-            </Button>}
+          </Button>}
         </div>
       </nav>
     </>

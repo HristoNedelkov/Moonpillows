@@ -16,15 +16,15 @@ function App() {
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged(setUser)
-  }, [])
+}, [])
   return (
     <>
-      <h1>{user?.email}</h1>
+    <h1>{user?.email}</h1>
       <Router>
-        <Navbar />
+        <Navbar user={user}/>
         <Switch>
           <Route path='/' exact  ><Redirect to="/Moonpillows" /></Route>
-          <Route path={fullPath('')} exact component={Home}></Route>
+          <Route  path={fullPath('')} exact component={Home}></Route>
           <Route path={fullPath('services')} component={Services} />
           <Route path={fullPath('products')} exact component={Products} />
           <Route path={fullPath('sign-up')} component={SignUp} />

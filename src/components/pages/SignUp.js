@@ -9,7 +9,7 @@ export default function SignUp() {
   let history = useHistory();
   function registerHandler(e) {
     e.preventDefault()
-    let [username, password, sf] = Array.from(e.target.querySelectorAll('input')).map(el => el.value)
+    let [username, password] = Array.from(e.target.querySelectorAll('input')).map(el => el.value)
 
     register(username, password)
       .then(() => {
