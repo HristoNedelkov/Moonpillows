@@ -1,12 +1,15 @@
 import React from 'react'
 
+import './Basket.css'
+import BasketItem from './BasketItem'
 function Basket(props) {
 
     return (
-        <div>
-            <h1>Congrats</h1>
-            <h2>You  {props.match.params.id ? 'purchased the pillow with this id: ' + props.match.params.id : 'entered the basket!'}</h2>
-
+        <div className="shopping-cart">
+            <div className="title">
+                Shopping Bag
+            </div>
+            <BasketItem></BasketItem>
         </div>
     )
 

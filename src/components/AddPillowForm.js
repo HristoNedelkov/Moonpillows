@@ -1,5 +1,6 @@
 import React from 'react'
 import './AddPillowForm.css'
+import fullPath from './services/pathSolver'
 import {addPillow} from './services/pillowHandlers'
 
 
@@ -11,7 +12,7 @@ function AddPillowForm(props) {
         const all = [el.title,el.price,el.link,el.description].map(el=> el.value)
         addPillow(all)
         .then(()=> {
-            props.history.push('/products')
+            props.history.push(fullPath('products'))
         })
     }
 

@@ -1,12 +1,13 @@
-import React, { useState, useContext, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useContext, useEffect, } from 'react'
+import { Link, useHistory } from 'react-router-dom'
 import ThingsContext from '../context/userContexxt'
 
 import './Pillow.css'
 import fullPath from './services/pathSolver'
-import { getOne } from './services/pillowHandlers'
+import { getOne, addCreator } from './services/pillowHandlers'
 
 function Pillow({ props }) {
+    const history = useHistory();
     let context = useContext(ThingsContext)
     const [pillow, setPillow] = useState([])
     useEffect(() => {
@@ -21,7 +22,19 @@ function Pillow({ props }) {
             console.log(res)
         })
     }, [])
+    function clickHandler(e) {
+        e.preventDefault()
+        if (context!= null) {
 
+            addCreator(props.match.params.id, context.uid)
+                .then(res => {
+                    console.log('mission accomplished!')
+                    history.push(fullPath('basket'))
+                })
+        } else  {
+            history.push(fullPath('sign-in'))
+        }
+    }
     return (
         <div className="pillow-page">
             <main className="container">
@@ -48,13 +61,12 @@ function Pillow({ props }) {
                     </div>
                     <div className="product-price">
                         <span>{pillow.label} BGN</span>
-                        <Link to={context ? fullPath(`basket/${props.match.params.id}`) : fullPath('sign-up')} className="cart-btn">Add to cart</Link>
+                        <Link onClick={clickHandler}  className="cart-btn">Add to cart</Link>
                     </div>
                 </div>
             </main>
-
         </div >
     )
 }
-
+// to={context ? fullPath(`basket/${props.match.params.id}`) : fullPath('sign-up')}
 export default Pillow

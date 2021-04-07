@@ -6,6 +6,7 @@ function addPillow([text, label, src, description]) {
         label,
         src,
         description,
+        owners: ['some value'],
     };
 
     const newPostKey = firebase.database().ref().child('pillows').push().key;
@@ -42,6 +43,10 @@ async function getOne(id) {
     }
 }
 
+// async function addUser () {
+//     userRef.child('mike').update({'dateOfBirth': moment(value.dateOfBirth).toDate().getTime()})
+// }
+
 function onChunks(array, n) {
     let all = [];
     while (array.length > 0) {
@@ -58,10 +63,23 @@ function onChunks(array, n) {
 
 }
 
+async function addCreator(id,creator) {
+    const ref = await firebase.database().ref().child('pillows/' + id);
+
+    // sync down from server
+    //await ref.on('value', function (snap) { list = snap.val(); });
+    let res = await (await ref.get()).val()
+
+    res.owners.push(creator)
+    console.log('tova gore e + ownerite')
+    await ref.set(res);
+}
+
 
 export {
     getAll,
     addPillow,
     onChunks,
-    getOne
+    getOne,
+    addCreator,
 }

@@ -11,7 +11,7 @@ function Cards() {
   useEffect(() => {
     getAll().then(res => {
       setPillows(res.reverse());
-    })
+    }).catch(res=> console.log(res))
   }, [])
 
 
