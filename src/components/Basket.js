@@ -6,25 +6,35 @@ import ThingsContext from '../context/userContexxt'
 
 import './Basket.css'
 import BasketItem from './BasketItem'
-import { getAllForUser } from './services/pillowHandlers'
+import { deleteFromBasket, getAllForUser, getPrice } from './services/pillowHandlers'
 
 function Basket(props) {
     const context = useContext(ThingsContext);
     const [pillows, setPillows] = useState([])
+    const [isDeleted, setIsDeleted] = useState(false)
     const [sum, setSum] = useState(0);
+    function deleteHandler(e) {
+        e.preventDefault()
+        deleteFromBasket(e.target.name, context.uid)
+            .then(res => {
+                console.log('Must be deleted!')
+                //history.push(fullPath('products'))
+                setIsDeleted(old => !old)
+            })
+    }
     useEffect(() => {
         if (context?.uid) {
             getAllForUser(context.uid)
                 .then(res => {
                     setPillows(res)
-                    console.log(res)
+                    setSum(getPrice(res))
                 })
 
         } else {
             console.log('not logged in!')
         }
 
-    }, [])
+    }, [isDeleted])
     return (
         <div className="shopping-cart">
             <div className="title">
@@ -34,10 +44,11 @@ function Basket(props) {
                 pillows.map(([id, all]) => {
                     return (
                         <BasketItem
+                            deleteHandlerFunc={deleteHandler}
                             key={id}
                             pillowId={id}
                             title={all.text}
-                            price={all.price}
+                            price={all.label}
                             src={all.src} ></BasketItem >
 
 
@@ -47,7 +58,7 @@ function Basket(props) {
 
 
             <div className="sumup item">
-                <h1>At Chekout: <span>{sum} BGN</span></h1>
+                <h1>At Checkout: <span>{sum.toFixed(2)} BGN</span></h1>
             </div>
 
         </div >

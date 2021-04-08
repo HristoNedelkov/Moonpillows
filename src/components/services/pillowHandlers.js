@@ -106,8 +106,14 @@ async function deleteFromBasket(id, owner) {
     }
 }
 
-function getPrice() {
-
+function getPrice(all) {
+    let res = 0;
+    for (const el of all) {
+        res+= +el[1].label
+        
+    }
+    return res
+    
 }
 export {
     deleteFromBasket,
@@ -117,4 +123,5 @@ export {
     getOne,
     addCreator,
     getAllForUser,
+    getPrice
 }
