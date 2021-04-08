@@ -11,7 +11,7 @@ import { getAllForUser } from './services/pillowHandlers'
 function Basket(props) {
     const context = useContext(ThingsContext);
     const [pillows, setPillows] = useState([])
-    
+    const [sum, setSum] = useState(0);
     useEffect(() => {
         if (context?.uid) {
             getAllForUser(context.uid)
@@ -30,15 +30,26 @@ function Basket(props) {
             <div className="title">
                 Shopping Bag
             </div>
-            {pillows.map(([id, all]) => {
-                return (
-                    <BasketItem title={all.text}
-                        price={all.price}
-                        src={all.src} ></BasketItem >
+            {!pillows.length ? <h1 style={{ textAlign: 'center', marginTop: '30px', fontFamily: 'Train One' }} >No products in the cart</h1> : (
+                pillows.map(([id, all]) => {
+                    return (
+                        <BasketItem
+                            key={id}
+                            pillowId={id}
+                            title={all.text}
+                            price={all.price}
+                            src={all.src} ></BasketItem >
 
 
-                )
-            })}
+                    )
+                })
+            )}
+
+
+            <div className="sumup item">
+                <h1>At Chekout: <span>{sum} BGN</span></h1>
+            </div>
+
         </div >
     )
 

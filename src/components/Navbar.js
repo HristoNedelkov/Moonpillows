@@ -41,7 +41,6 @@ function Navbar({ user }) {
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
-          <h1 style={{ color: 'white', marginLeft: '20px', fontSize: '22px' }}> {context ? `Welcome,  ${context.email}` : ''}</h1>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <NavLink to={fullPath('')} activeClassName="pressed" exact={true} className='nav-links' onClick={closeMobileMenu}>

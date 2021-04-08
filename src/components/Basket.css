@@ -1,5 +1,4 @@
 /* * {
-    box-sizing: border-box;
 }
 
 html, body {
@@ -11,8 +10,9 @@ html, body {
 } */
 
 .shopping-cart {
+    box-sizing: border-box;
     width: 750px;
-    height: 423px;
+    height: auto;
     margin: 80px auto;
     background: #FFFFFF;
     box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.10);
@@ -55,6 +55,7 @@ html, body {
 .shopping-cart .delete-btn {
     width: 18px;
     height: 17px;
+    cursor: pointer;
 }
 
 .shopping-cart .like-btn {
@@ -67,6 +68,7 @@ html, body {
     background-size: 2900%;
     background-repeat: no-repeat;
 }
+
 .shopping-cart .like-btn:hover {
     animation-name: animate;
     animation-duration: .8s;
@@ -74,8 +76,6 @@ html, body {
     animation-timing-function: steps(28);
     animation-fill-mode: forwards;
 }
-
-
 
 @keyframes animate {
     0% {
@@ -93,11 +93,9 @@ html, body {
     margin-right: 50px;
 }
 
-
 #snimka {
-    max-width: 280px ;
-    max-height: 189px ;
-
+    max-width: auto;
+    max-height: 100px;
 }
 
 .shopping-cart .description {
@@ -157,4 +155,14 @@ html, body {
 
 .shopping-cart button:focus, .shopping-cart input:focus {
     outline: 0;
+}
+
+
+.sumup {
+    margin-top: 40px;
+    border-top: 3px solid black;
+}
+.sumup h1 {
+    margin-left: 300px;
+    font-family: 'Train One', cursive;
 }

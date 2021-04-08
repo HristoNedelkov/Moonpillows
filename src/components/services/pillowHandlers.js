@@ -38,7 +38,7 @@ async function getAllForUser(uid) {
 
     if (res.exists()) {
         let snap = await res.val()
-       let result =  Object.entries(snap).filter(([id, all]) => {
+        let result = Object.entries(snap).filter(([id, all]) => {
             if (all.owners.includes(uid)) {
                 return [id, all]
             } else {
@@ -93,8 +93,24 @@ async function addCreator(id, creator) {
     }
 }
 
+async function deleteFromBasket(id, owner) {
+    console.log(id)
+    console.log(owner)
+    //https://moonpillows-676c2-default-rtdb.europe-west1.firebasedatabase.app/pillows/-MXhz8_4eP49SBW-gRVW/owners
+    const ref = await firebase.database().ref().child('pillows/' + id + '/owners');
+    let res = await (await ref.get()).val()
+    if (res.includes(owner)) {
+        let indexOf = res.indexOf(owner)
+        res.splice(indexOf, 1)
+        await ref.set(res);
+    }
+}
 
+function getPrice() {
+
+}
 export {
+    deleteFromBasket,
     getAll,
     addPillow,
     onChunks,
