@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { register } from '../services/authServices';
 import fullPath from '../services/pathSolver';
@@ -7,14 +8,27 @@ import './SignUp.css';
 
 export default function SignUp() {
   let history = useHistory();
+  const [error, setError] = useState('')
   function registerHandler(e) {
     e.preventDefault()
-    let [username, password] = Array.from(e.target.querySelectorAll('input')).map(el => el.value)
+    let [username, password, rePass] = Array.from(e.target.querySelectorAll('input')).map(el => el.value)
+    if (password === rePass) {
 
-    register(username, password)
-      .then(() => {
-        history.push(fullPath(''))
-      })
+      register(username, password)
+        .then(() => {
+          history.push(fullPath(''))
+        }).catch(e=> {
+          setError(e )
+          setTimeout((() => {
+            setError('')
+          }), 3000)
+        })
+    } else {
+      setError('passwords missmatch!')
+      setTimeout((() => {
+        setError('')
+      }), 3000)
+    }
   }
   return (
     <div id="sign-up">
@@ -33,6 +47,7 @@ export default function SignUp() {
           <span className="icon"></span>
 
           <button type="submit">Sign-up</button>
+          {error ? <p style={{ color: "red", fontSize: '24px', fontFamily: 'Train One' }}>{error}</p> : ''}
           <Link className="login-link" to={fullPath('sign-in')}>Already a member? <span>LOGIN NOW.</span>  </Link>
         </div>
 
