@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Moonpillows/precache-manifest.e1f7895edfef2bed2f6d6cadf3a49c57.js"
+  "/Moonpillows/precache-manifest.92ec4ec9b0c412722cd490d7eca390a0.js"
 );
 
 self.addEventListener('message', (event) => {
