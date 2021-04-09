@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect, } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import ThingsContext from '../context/userContexxt'
+import ReactImageZoom from 'react-image-zoom';
 
 import './Pillow.css'
 import fullPath from './services/pathSolver'
@@ -38,8 +39,15 @@ function Pillow({ props }) {
     return (
         <div className="pillow-page">
             <main className="container">
-                <div className="left-column">
-                    <img className="active" src={pillow.src} alt="" />
+                <div className="zoomed">
+                <ReactImageZoom 
+                img={pillow.src + ''}
+                width="500"
+                height="375"
+                zoomPosition="bottom"
+                zoomWidth="400"
+                />  
+                    {/* <img className="active" src={pillow.src} alt="" /> */}
                 </div>
                 <div className="right-column">
                     <div className="product-description">
@@ -61,12 +69,11 @@ function Pillow({ props }) {
                     </div>
                     <div className="product-price">
                         <span>{pillow.label} BGN</span>
-                        <Link onClick={clickHandler}  className="cart-btn">Add to cart</Link>
+                        <button onClick={clickHandler}  className="cart-btn">Add to cart</button>
                     </div>
                 </div>
             </main>
         </div >
     )
 }
-// to={context ? fullPath(`basket/${props.match.params.id}`) : fullPath('sign-up')}
 export default Pillow

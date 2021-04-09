@@ -24,7 +24,9 @@
 }
 
 /* Left Column */
-
+.zoomed:hover {
+cursor: zoom-in;
+}
 .pillow-page .left-column img {
   height: 60%;
   width: 390px;
