@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aebdbc349d0afa686480253b769ca369",
+    "revision": "7ba2e768a9ebf7de6b9be44576b6e07e",
     "url": "/Moonpillows/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Moonpillows/static/css/3.df8e1aac.chunk.css"
   },
   {
-    "revision": "ea9bdea4d6a79edd775c",
+    "revision": "19510394abb40502850d",
     "url": "/Moonpillows/static/css/main.e817d897.chunk.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Moonpillows/static/js/3.d4c607d3.chunk.js"
   },
   {
-    "revision": "ea9bdea4d6a79edd775c",
-    "url": "/Moonpillows/static/js/main.a09c7bdd.chunk.js"
+    "revision": "19510394abb40502850d",
+    "url": "/Moonpillows/static/js/main.1c8796cd.chunk.js"
   },
   {
     "revision": "756959bb2954e7935e22",
