@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router'
 import fP from '../services/pathSolver'
 import './About.css'
-
+import Footer from '../Footer'
 function About() {
     const [isShown1, setIsShown1] = useState(false)
     const [isShown2, setIsShown2] = useState(false)
@@ -59,6 +59,7 @@ function About() {
             <h1>Find us on the map {'->'}</h1>
         <img onClick={(e)=> history.push(fP('map'))} src="https://firebasestorage.googleapis.com/v0/b/moonpillows-676c2.appspot.com/o/images%2Flocation.gif?alt=media&token=9997591f-5c43-4980-886f-3a32cd04db76" alt=""/>
     </div>
+    <Footer></Footer>
         </div>
     )
 }

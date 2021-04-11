@@ -49,7 +49,7 @@ function Navbar({ user }) {
             </li>
             <li className='nav-item'>
               <NavLink
-                to={fP('services')}
+                to={context? fP('services'): fP('sign-in')}
                 className='nav-links'
                 onClick={closeMobileMenu}
                 activeClassName="pressed"
