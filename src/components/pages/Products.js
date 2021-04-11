@@ -5,11 +5,11 @@ import '../../App.css';
 
 import Footer from '../Footer';
 import { getAll, onChunks } from "../services/pillowHandlers";
-import fullPath from '../services/pathSolver';
+import fP from '../services/pathSolver';
 
 export default function Products({ match }) {
   const [pillows, setPillows] = useState([]);
-  const [countByRow, setCountByRow] = useState(4)
+  const [countByRow, setCountByRow] = useState(3)
   const [isDelete, setIsDelete] = useState(false)
   useEffect(() => {
     getAll().then(res => {
@@ -66,13 +66,14 @@ export default function Products({ match }) {
                       text={all.text}
                       label={"BGN " + all.label}
                       description={all.description}
-                      path={fullPath(`products/${id}`)}
+                      path={fP(`products/${id}`)}
                     />)
                 })
 
                 return (
                   <ul className="cards__items">
                     {el}
+                    
                   </ul>
                 )
               })

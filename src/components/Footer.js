@@ -2,7 +2,7 @@ import React from 'react';
 import './Footer.css';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
-import fullPath from './services/pathSolver';
+import fP from './services/pathSolver';
 
 function Footer() {
   return (
@@ -31,40 +31,40 @@ function Footer() {
           <div className='footer-link-items'>
             <h2>About Us</h2>
             <Link to='/sign-up'>How it works</Link>
-            <Link to={fullPath('')}>Testimonials</Link>
-            <Link to={fullPath('')}>Careers</Link>
-            <Link to={fullPath('')}>Investors</Link>
-            <Link to={fullPath('')}>Terms of Service</Link>
+            <Link to={fP('')}>Testimonials</Link>
+            <Link to={fP('')}>Careers</Link>
+            <Link to={fP('')}>Investors</Link>
+            <Link to={fP('')}>Terms of Service</Link>
           </div>
           <div className='footer-link-items'>
             <h2>Contact Us</h2>
-            <Link to={fullPath('')}>Contact</Link>
-            <Link to={fullPath('')}>Support</Link>
-            <Link to={fullPath('')}>Shops</Link>
-            <Link to={fullPath('')}>Sponsorships</Link>
+            <Link to={fP('')}>Contact</Link>
+            <Link to={fP('')}>Support</Link>
+            <Link to={fP('')}>Shops</Link>
+            <Link to={fP('')}>Sponsorships</Link>
           </div>
         </div>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
             <h2>Sponsorships</h2>
-            <Link to={fullPath('')}>How to get one</Link>
-            <Link to={fullPath('')}>Clients</Link>
-            <Link to={fullPath('')}>Agency</Link>
-            <Link to={fullPath('')}>Influencer</Link>
+            <Link to={fP('')}>How to get one</Link>
+            <Link to={fP('')}>Clients</Link>
+            <Link to={fP('')}>Agency</Link>
+            <Link to={fP('')}>Influencer</Link>
           </div>
           <div className='footer-link-items'>
             <h2>Social Media</h2>
-            <Link to={fullPath('')}>Instagram</Link>
-            <Link to={fullPath('')}>Facebook</Link>
-            <Link to={fullPath('')}>Youtube</Link>
-            <Link to={fullPath('')}>Twitter</Link>
+            <Link to={fP('')}>Instagram</Link>
+            <Link to={fP('')}>Facebook</Link>
+            <Link to={fP('')}>Youtube</Link>
+            <Link to={fP('')}>Twitter</Link>
           </div>
         </div>
       </div>
       <section className='social-media'>
         <div className='social-media-wrap'>
           <div className='footer-logo'>
-            <Link to={fullPath('')} className='social-logo'>
+            <Link to={fP('')} className='social-logo'>
               MP
               <i className='fab fa-typo3' />
             </Link>
@@ -73,7 +73,7 @@ function Footer() {
           <div className='social-icons'>
             <Link
               className='social-icon-link facebook'
-              to={fullPath('')}
+              to={fP('')}
               target='_blank'
               aria-label='Facebook'
             >
@@ -81,7 +81,7 @@ function Footer() {
             </Link>
             <Link
               className='social-icon-link instagram'
-              to={fullPath('')}
+              to={fP('')}
               target='_blank'
               aria-label='Instagram'
             >
@@ -89,7 +89,7 @@ function Footer() {
             </Link>
             <Link
               className='social-icon-link youtube'
-              to={fullPath('')}
+              to={fP('')}
               target='_blank'
               aria-label='Youtube'
             >
@@ -97,7 +97,7 @@ function Footer() {
             </Link>
             <Link
               className='social-icon-link twitter'
-              to={fullPath('')}
+              to={fP('')}
               target='_blank'
               aria-label='Twitter'
             >
@@ -105,7 +105,7 @@ function Footer() {
             </Link>
             <Link
               className='social-icon-link twitter'
-              to={fullPath('')}
+              to={fP('')}
               target='_blank'
               aria-label='LinkedIn'
             >

@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { login } from '../services/authServices'
-import fullPath from '../services/pathSolver'
+import fP from '../services/pathSolver'
 
 function SignIn() {
     let history = useHistory();
+    const [error, setError] = useState('')
     function loginHandler(e) {
         e.preventDefault()
         let username = e.target.email.value
@@ -12,7 +13,13 @@ function SignIn() {
         login(username, pass)
             .then(userCredentials => {
                 console.log(userCredentials)
-                history.push(fullPath(''))
+                history.push(fP(''))
+            })
+            .catch(e => {
+                setError(e.message)
+                setTimeout((() => {
+                    setError('')
+                }), 3000)
             })
     }
     return (
@@ -29,8 +36,9 @@ function SignIn() {
                     <input type="password" className="form__input" pattern=".{6,}" name="password" placeholder="password" required />
                     <span className="icon"></span>
 
-                    <button type="submit">Sign-up</button>
-                    <Link className="login-link" to={fullPath('sign-up')}>New here? <span>REGISTER NOW.</span>  </Link>
+                    <button type="submit">Sign-in</button>
+                    <Link className="login-link" to={fP('sign-up')}>New here? <span>REGISTER NOW.</span>  </Link>
+                    {error ? <p className="error">{error}</p> : ''}
                 </div>
 
             </form>

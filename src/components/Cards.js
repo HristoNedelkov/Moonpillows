@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
 import { getAll } from './services/pillowHandlers';
-import fullPath from './services/pathSolver';
+import fP from './services/pathSolver';
 
 
 function Cards() {
@@ -32,7 +32,7 @@ function Cards() {
                   text={all.text}
                   label={"BGN " + all.label}
                   description={all.description}
-                  path={fullPath(`products/${id}`)} />)
+                  path={fP(`products/${id}`)} />)
             })}
           </ul>
           <ul className='cards__items'>
@@ -44,7 +44,7 @@ function Cards() {
                   text={all.text}
                   label={"BGN " + all.label}
                   description={all.description}
-                  path={fullPath(`products/${id}`)} />)
+                  path={fP(`products/${id}`)} />)
             })}
 
           </ul>

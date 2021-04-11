@@ -8,7 +8,7 @@ import './Basket.css'
 import BasketItem from './BasketItem'
 import { deleteFromBasket, getAllForUser, getPrice } from './services/pillowHandlers'
 
-function Basket(props) {
+function Basket() {
     const context = useContext(ThingsContext);
     const [pillows, setPillows] = useState([])
     const [isDeleted, setIsDeleted] = useState(false)
@@ -18,7 +18,7 @@ function Basket(props) {
         deleteFromBasket(e.target.name, context.uid)
             .then(res => {
                 console.log('Must be deleted!')
-                //history.push(fullPath('products'))
+                //history.push(fP('products'))
                 setIsDeleted(old => !old)
             })
     }
@@ -55,8 +55,6 @@ function Basket(props) {
                     )
                 })
             )}
-
-
             <div className="sumup item">
                 <h1>At Checkout: <span>{sum.toFixed(2)} BGN</span></h1>
             </div>

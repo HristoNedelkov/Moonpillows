@@ -4,7 +4,7 @@ import ThingsContext from '../context/userContexxt'
 import ReactImageZoom from 'react-image-zoom';
 
 import './Pillow.css'
-import fullPath from './services/pathSolver'
+import fP from './services/pathSolver'
 import { getOne, addCreator } from './services/pillowHandlers'
 
 function Pillow({ props }) {
@@ -30,10 +30,10 @@ function Pillow({ props }) {
             addCreator(props.match.params.id, context.uid)
                 .then(res => {
                     console.log('mission accomplished!')
-                    history.push(fullPath('basket'))
+                    history.push(fP('basket'))
                 })
         } else  {
-            history.push(fullPath('sign-in'))
+            history.push(fP('sign-in'))
         }
     }
     return (
@@ -42,10 +42,10 @@ function Pillow({ props }) {
                 <div className="zoomed">
                 <ReactImageZoom 
                 img={pillow.src + ''}
-                width="500"
-                height="375"
+                width={500}
+                height={375}
                 zoomPosition="bottom"
-                zoomWidth="400"
+                zoomWidth={400}
                 />  
                     {/* <img className="active" src={pillow.src} alt="" /> */}
                 </div>

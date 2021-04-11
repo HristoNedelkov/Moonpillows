@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Button } from './Button';
 import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
-import fullPath from './services/pathSolver';
+import fP from './services/pathSolver';
 import ThingsContext from '../context/userContexxt';
 
 function Navbar({ user }) {
@@ -34,7 +34,7 @@ function Navbar({ user }) {
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <Link to={fullPath('')} className='navbar-logo' onClick={closeMobileMenu}>
+          <Link to={fP('')} className='navbar-logo' onClick={closeMobileMenu}>
             MP
             <i className='fab fa-typo3' />
           </Link>
@@ -43,13 +43,13 @@ function Navbar({ user }) {
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <NavLink to={fullPath('')} activeClassName="pressed" exact={true} className='nav-links' onClick={closeMobileMenu}>
+              <NavLink to={fP('')} activeClassName="pressed" exact={true} className='nav-links' onClick={closeMobileMenu}>
                 Home
               </NavLink>
             </li>
             <li className='nav-item'>
               <NavLink
-                to={fullPath('services')}
+                to={fP('services')}
                 className='nav-links'
                 onClick={closeMobileMenu}
                 activeClassName="pressed"
@@ -60,7 +60,7 @@ function Navbar({ user }) {
             </li>
             <li className='nav-item'>
               <NavLink
-                to={fullPath('products')}
+                to={fP('products')}
                 activeClassName="pressed"
                 exact={true}
                 className='nav-links'
@@ -71,7 +71,7 @@ function Navbar({ user }) {
             </li>
             <li className='nav-item'>
               <NavLink
-                to={fullPath('about')}
+                to={fP('about')}
                 activeClassName="pressed"
                 exact={true}
                 className='nav-links'
@@ -83,7 +83,7 @@ function Navbar({ user }) {
 
             <li>
               <Link
-                to={fullPath('sign-up')}
+                to={fP('sign-up')}
                 className='nav-links-mobile'
                 onClick={closeMobileMenu}
               >
@@ -93,13 +93,13 @@ function Navbar({ user }) {
           </ul>
           {button && <Button buttonStyle='btn--outline'>
             <Link
-              to={!user ? fullPath('sign-up') : fullPath('logout')}
+              to={!user ? fP('sign-up') : fP('logout')}
               id="last-button">
-              {!user ? 'SIGN UP' : 'LOGOUT'}
+              {!user ? 'SIGN UP' : 'LOG OUT'}
             </Link>
           </Button>}
         </div>
-        <Link to={fullPath('basket')}>
+        <Link to={fP('basket')}>
         {context ? (<img alt="" src="https://firebasestorage.googleapis.com/v0/b/moonpillows-676c2.appspot.com/o/images%2Fbasket.png?alt=media&token=b4fb3515-7268-4938-a924-f1368f2a889d"></img>) : ''}
         </Link>
       </nav>

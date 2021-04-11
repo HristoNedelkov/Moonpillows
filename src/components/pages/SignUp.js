@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { register } from '../services/authServices';
-import fullPath from '../services/pathSolver';
+import fP from '../services/pathSolver';
 
 import './SignUp.css';
 
@@ -13,12 +13,11 @@ export default function SignUp() {
     e.preventDefault()
     let [username, password, rePass] = Array.from(e.target.querySelectorAll('input')).map(el => el.value)
     if (password === rePass) {
-
       register(username, password)
         .then(() => {
-          history.push(fullPath(''))
+          history.push(fP(''))
         }).catch(e=> {
-          setError(e )
+          setError(e.message )
           setTimeout((() => {
             setError('')
           }), 3000)
@@ -47,8 +46,8 @@ export default function SignUp() {
           <span className="icon"></span>
 
           <button type="submit">Sign-up</button>
-          {error ? <p style={{ color: "red", fontSize: '24px', fontFamily: 'Train One' }}>{error}</p> : ''}
-          <Link className="login-link" to={fullPath('sign-in')}>Already a member? <span>LOGIN NOW.</span>  </Link>
+          {error ? <p className="error">{error}</p> : ''}
+          <Link className="login-link" to={fP('sign-in')}>Already a member? <span>LOG IN NOW.</span>  </Link>
         </div>
 
       </form>

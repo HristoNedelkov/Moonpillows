@@ -1,12 +1,12 @@
 import React from 'react'
-import fullPath from './services/pathSolver'
+import fP from './services/pathSolver'
 import { Link } from 'react-router-dom';
 
 
 function BasketItem({ title, price, src, pillowId,deleteHandlerFunc }) {
    
     return (
-        <Link to={fullPath('products/'+ pillowId)}>
+        <Link to={fP('products/'+ pillowId)}>
             <div className="item">
 
                 <div className="buttons">
