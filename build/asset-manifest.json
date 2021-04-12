@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Moonpillows/static/css/main.e817d897.chunk.css",
+    "main.css": "/Moonpillows/static/css/main.95f1958d.chunk.css",
     "main.js": "/Moonpillows/static/js/main.1c8796cd.chunk.js",
     "main.js.map": "/Moonpillows/static/js/main.1c8796cd.chunk.js.map",
     "runtime-main.js": "/Moonpillows/static/js/runtime-main.a9743931.js",
@@ -11,16 +11,16 @@
     "static/js/3.d4c607d3.chunk.js": "/Moonpillows/static/js/3.d4c607d3.chunk.js",
     "static/js/3.d4c607d3.chunk.js.map": "/Moonpillows/static/js/3.d4c607d3.chunk.js.map",
     "index.html": "/Moonpillows/index.html",
-    "precache-manifest.bff619662c539e81d7a4a8eda9b63487.js": "/Moonpillows/precache-manifest.bff619662c539e81d7a4a8eda9b63487.js",
+    "precache-manifest.868eadc0d000facace0719fab03fae3b.js": "/Moonpillows/precache-manifest.868eadc0d000facace0719fab03fae3b.js",
     "service-worker.js": "/Moonpillows/service-worker.js",
     "static/css/3.df8e1aac.chunk.css.map": "/Moonpillows/static/css/3.df8e1aac.chunk.css.map",
-    "static/css/main.e817d897.chunk.css.map": "/Moonpillows/static/css/main.e817d897.chunk.css.map",
+    "static/css/main.95f1958d.chunk.css.map": "/Moonpillows/static/css/main.95f1958d.chunk.css.map",
     "static/js/2.af22a31d.chunk.js.LICENSE.txt": "/Moonpillows/static/js/2.af22a31d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a9743931.js",
     "static/js/2.af22a31d.chunk.js",
-    "static/css/main.e817d897.chunk.css",
+    "static/css/main.95f1958d.chunk.css",
     "static/js/main.1c8796cd.chunk.js"
   ]
 }
